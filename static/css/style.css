@@ -1,0 +1,70 @@
+.login-bar{
+	height : 10%;
+	background-color : #25ad9f;
+}
+.login-main-div{
+	padding-top : 3.5%;
+	height : 10%;
+
+}
+.header-button{
+	background-color : #25988C;
+	border-color: #28AD9F;
+}
+.header-button:hover{
+	background-color : #25988C;
+	border-color : #28AD9F;
+}
+.sign-form{
+	padding-top : 2%;
+}
+
+.brand-icon{
+	padding-top : 50%;
+}
+.header-elements div{
+	display: inline-block;
+}
+.search-bar{
+	 white-space:nowrap;
+	 margin-top: 1%;
+	
+	
+}
+.search-bar div{
+	display: inline-block;
+	
+}
+.input-search-box{
+	background-color : #47B7AB;
+	border-color: #28AD9F;
+}
+
+.user-profile{
+	float: right;
+	text-align: right;
+
+}
+.star-rate{
+	text-align: center;
+	padding-top: 1% ;
+}
+.map-div{
+	padding-top: 2% ;
+}
+.create-route-main-div{
+	text-align: left;
+	
+}
+.create-route-step-title{
+	background-color: #28AD9F;
+}
+.create-route-next-step{
+	float: right;
+}
+.create-route-hr{
+	border-top: 0px;
+	
+}
+
+

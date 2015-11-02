@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Social Network Template</title>
+
+    <!-- App Styling Bundle -->
+    <link href="../static/css/default.min.css" rel="stylesheet">
+	<link href="../static/css/style.css" rel="stylesheet">
+    <script src="../static/js/jquery-1.11.3.min.js"></script>
+    <script src="../static/js/jquery-1.11.3.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]><script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <div id="header">
+
+    </div>
+    <script>
+     $("#header").load("header.html");
+    </script>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading create-route-step-title">Step1 Information</div>
+                    <div class="panel-body ">
+                        <form class="form-horizontal " role="form">
+							<div class="form-group">
+                                <label class="col-sm-2 control-label">Accomodation Type</label>
+                                <div class="col-sm-9">
+                                    <select class="selectpicker" multiple data-style="btn-white" title='Choose one of the following...'>
+                                        <option value="Hostel">Hostel</option>
+										<option value="Hotel">Hotel</option>
+										<option value="Home-Stay-Network">Home Stay Network</option>
+										<option value="Car-Camping">Car Camping</option>
+										<option value="Camping">Camping</option>
+									    <option value="Night at Road">Night at Road</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                             <div class="form-group">
+                                <label class="col-sm-2 control-label">Name of Hotel</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="name-of-hotels" placeholder="Type here..">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Architecture & Buildings</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="Architecture-and-buildings" placeholder="Type here..">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Food</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="food" placeholder="Type here..">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Entertainment & Arts</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="entertainment-and-arts" placeholder="Type here..">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Outdoor</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="outdoor" placeholder="Type here..">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Shop & Service</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="shop-and-service" placeholder="Type here..">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Total Expenses</label>
+                                <div class="col-sm-9">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-dollar"></i></span>
+                                        <input type="text" class="form-control" placeholder="Total Expenses Except First and Last Trips">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Step 1</label>
+                                <div class="col-sm-9">
+                                    <textarea class="form-control" rows="5"></textarea>
+                                </div>
+                            </div>
+                             <div class="form-group">
+                                <label class="col-sm-2 control-label">Upload Photo</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="inputEmail3" placeholder="Type here..">
+                                </div>
+                            </div>
+
+                            <div class="form-group create-route-next-step">
+                                <div class="col-sm-9">
+                                    <button type="submit" class="btn btn-primary">Next</button>
+                                </div>
+                            </div>
+
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <div class="footer">
+        Social Network Template &copy; Copyright Notice
+    </div>
+
+    <!-- // Footer -->
+    
+<!-- Vendor Scripts Bundle --><script src="../static/js/vendor.min.js"></script>
+
+    <!-- App Scripts Bundle -->
+    <script src="../static/js/scripts.min.js"></script>
+</body>
+</html>

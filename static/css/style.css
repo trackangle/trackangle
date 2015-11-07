@@ -39,7 +39,9 @@
 	background-color : #47B7AB;
 	border-color: #28AD9F;
 }
-
+.media-heading{
+	background-color : #25ad9f !important;
+}
 .user-profile{
 	float: right;
 	text-align: right;
@@ -67,4 +69,6 @@
 	
 }
 
-
+.size-fit-container{
+	width:100%;
+}

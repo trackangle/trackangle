@@ -21,6 +21,8 @@ from . import views
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', views.index),
+    url(r'^create_route/$', views.create_route),
+    url(r'^create_route2/$', views.create_route2),
     url(r'^accounts/', include('registration.backends.simple.urls')),
 
 ]

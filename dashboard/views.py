@@ -33,5 +33,22 @@ def user_private_profile(request):
 
 @login_required(login_url='/accounts/login/')
 def index(request):
-    template = loader.get_template('../templates/user-private-profile.html')
-    return HttpResponse(template.render(), 'text/html')
+    #template = loader.get_template('../templates/user-private-profile.html')
+    user = request.user
+    return render_to_response('../templates/user-private-profile.html',{'user': user})
+    #return HttpResponse(template.render(), 'text/html')
+
+
+@login_required(login_url='/accounts/login/')
+def create_route(request):
+    #template = loader.get_template('../templates/user-private-profile.html')
+    user = request.user
+    return render_to_response('../templates/create-route.html',{'user': user})
+    #return HttpResponse(template.render(), 'text/html')
+
+@login_required(login_url='/accounts/login/')
+def create_route2(request):
+    #template = loader.get_template('../templates/user-private-profile.html')
+    user = request.user
+    return render_to_response('../templates/create-route2.html',{'user': user})
+    #return HttpResponse(template.render(), 'text/html')

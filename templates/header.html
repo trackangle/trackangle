@@ -1,0 +1,87 @@
+{% load staticfiles %}
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Social Network Template</title>
+
+    <!-- App Styling Bundle -->
+    <script src="{% static "js/bootstrap.js" %}"></script>
+    <script src="{% static "js/vendor.min.js" %}"></script>
+    <script src="{% static "js/scripts.min.js" %}"></script>
+    <script src="{% static "js/jquery-1.11.3.min.js" %}"></script>
+
+
+    <link href="{% static "css/_vendor.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/_vendor.bundle.css" %}" rel="stylesheet">
+    <link href="{% static "css/default.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+
+
+</head>
+<body>
+
+        <nav class="navbar navbar-main navbar-primary navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subnav">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="fa fa-ellipsis-h"></span>
+                    </button>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling 
+                <div class="header-elements">
+                        <a class="navbar-brand brand-icon" href="#">LOGO</a>
+                        <div class="col-md-9 search-bar">
+
+                            <input type="text" class="form-control input-search-box">
+                                <span >
+                                    <button class="btn btn-default header-button" type="button">Go!</button>
+
+                                </span>
+                        </div>-->
+
+                    <a class="navbar-brand brand-icon" href="#">LOGO</a>
+		<div class="col-md-9">
+		    <form class="navbar-form navbar-left size-fit-container" role="search">
+       			 <div class="form-group">
+          	   		<input type="text" class="form-control size-fit-container" placeholder="Search">
+        		</div>
+        		<button type="submit" class="btn btn-default">Go</button>
+      		    </form>
+		</div>
+
+                        <div class="nav navbar-nav user-profile">
+                           <li class="dropdown">
+                                <a href="#" class="dropdown-toggle user" data-toggle="dropdown">
+                                    <img src="../static/images/people/50/woman-5.jpg" alt="Bill" class="img-circle" width="40"> {{ user.username }} <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="user-private-profile.html">Profile</a>
+                                    </li>
+                                    <li><a href="user-private-messages.html">Messages</a>
+                                    </li>
+                        	    <li><a href="{% url 'dashboard.views.create_route' %}">Create Route</a></li>
+                        	    <li><a href="{% url 'auth_logout' %}">Logout</a></li>
+                                    </li>
+                                </ul>
+                            </li>
+                        </div>
+
+
+
+                <!-- /.navbar-collapse -->
+                </div>
+            </div>
+        </nav> 
+{% block content %}{% endblock %}
+</body>

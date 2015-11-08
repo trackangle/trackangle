@@ -12,8 +12,11 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import treebeard
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+print("BASE: ", BASE_DIR)
 
 
 # Quick-start development settings - unsuitable for production
@@ -28,6 +31,8 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+ROOT_URLCONF='trackangle.urls'
+
 # Application definition
 
 INSTALLED_APPS = (
@@ -39,6 +44,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'dashboard',
     'registration',
+    'django_extensions',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -52,12 +58,11 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-ROOT_URLCONF = 'dashboard.urls'
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'dashboard/templates')]
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),
+                 os.path.join(os.path.dirname(treebeard.__file__), 'templates')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -71,7 +76,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'dashboard.wsgi.application'
+WSGI_APPLICATION = 'wsgi.application'
 
 
 # Database

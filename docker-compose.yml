@@ -1,0 +1,11 @@
+db:
+  image: postgres
+web:
+  build: .
+  command: python3.4 manage.py runserver --settings=trackangle.settings.settings 0.0.0.0:8000
+  volumes:
+    - .:/trackangle
+  ports:
+    - "8000:8000"
+  links:
+    - db

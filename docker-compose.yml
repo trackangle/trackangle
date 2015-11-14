@@ -1,0 +1,20 @@
+web:
+  build: .
+  container_name: trackangle-web
+  command: python3.4 manage.py runserver --settings=trackangle.settings.settings 0.0.0.0:8000
+  volumes:
+    - .:/trackangle
+  ports:
+    - "8000:8000"
+  links:
+    - db
+db:
+  image: mysql
+  container_name: trackangle-mysql
+  ports:
+    - "3306:3306" 
+  environment:
+    MYSQL_DATABASE: trackangle
+    MYSQL_USER: root
+    DATABASE_PASSWORD: trackangle
+    MYSQL_ROOT_PASSWORD: trackangle
